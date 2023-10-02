@@ -11,7 +11,7 @@ let userEmail;
 
 const id = Symbol('123')
 const anotherId = Symbol('123')
-console.log(id == anotherId);//false, symbol makes them unique
+//console.log(id == anotherId);//false, symbol makes them unique
 
 const bigNum=28267467346n //n makes it automatically bigint
 
@@ -33,6 +33,32 @@ const myFunction = function(){
 } //function can be treated as variable in java script
 
 //how to know the data type, we do that using: typeof()
-console.log(typeof myFunction);
+
+//console.log(typeof myFunction);
+
 //return type of non-primitive is object(for function if we go deep its function object)
 //link: https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// *************************************************************
+
+//stack(primitive),heap(non-primitive)
+
+let myName = "shreyayadav"
+let otherName = myName
+otherName = "vaibhav"
+
+console.log(myName);
+console.log(otherName);
+
+let user = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let usertwo = user
+
+usertwo.email = "shreya@google.com"
+
+console.log(user.email);
+console.log(usertwo.email);
